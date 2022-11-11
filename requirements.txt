@@ -40,3 +40,5 @@ Werkzeug==2.0.3
 WTForms==3.0.0
 xxhash==3.1.0
 yarg==0.1.9
+
+# flask_mysqldb
