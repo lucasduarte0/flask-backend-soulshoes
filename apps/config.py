@@ -29,15 +29,14 @@ class ProductionConfig(Config):
     REMEMBER_COOKIE_DURATION = 3600
 
     # PostgreSQL database
-    SQLALCHEMY_DATABASE_URI = "postgres://yuwopqkgrjamhk:53ce3763ed92be24b9e889000552a5a54cbc48b107652a09038173d51ac59326@ec2-3-219-135-162.compute-1.amazonaws.com:5432/dabuqj9aebubsl"
-    # '{}://{}:{}@{}:{}/{}'.format(
-    #     os.getenv('DB_ENGINE'   , 'mysql+pymysql'),
-    #     os.getenv('DB_USERNAME' , 'ec2-3-219-135-162.compute-1.amazonaws.com'),
-    #     os.getenv('DB_PASS'     , 'dabuqj9aebubsl'),
-    #     os.getenv('DB_HOST'     , 'yuwopqkgrjamhk'),
-    #     os.getenv('DB_PORT'     , 5432),
-    #     os.getenv('DB_NAME'     , '53ce3763ed92be24b9e889000552a5a54cbc48b107652a09038173d51ac59326')
-    # )
+    SQLALCHEMY_DATABASE_URI = '{}://{}:{}@{}:{}/{}'.format(
+        os.getenv('DB_ENGINE'   , 'mysql'),
+        os.getenv('DB_USERNAME' , 'ec2-3-219-135-162.compute-1.amazonaws.com'),
+        os.getenv('DB_PASS'     , 'dabuqj9aebubsl'),
+        os.getenv('DB_HOST'     , 'yuwopqkgrjamhk'),
+        os.getenv('DB_PORT'     , 5432),
+        os.getenv('DB_NAME'     , '53ce3763ed92be24b9e889000552a5a54cbc48b107652a09038173d51ac59326')
+    )
 
 
 class DebugConfig(Config):
